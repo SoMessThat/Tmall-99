@@ -7,7 +7,7 @@
 ### 使用说明
 >>##### 1.安装python。
 >>>[Win 10安装Python及环境变量配置](https://www.cnblogs.com/shizhijie/p/7768778.html)(传送门，此处不多介绍)
-##### 2.安装Android&nbsp;SDK ，并设置环境变量。运行adb有相应的显示结果。
+>>##### 2.安装Android&nbsp;SDK ，并设置环境变量。运行adb有相应的显示结果。
 >>>[如何正确安装ADB工具](https://jingyan.baidu.com/article/22fe7cedf67e353002617f25.html)(传送门，此处不多介绍)
 >>##### 3.手机连接电脑，打开开发者选项，并允许USB调试，允许模拟点击。
 >>##### 4.打开手机天猫，进入养章鱼界面。运行此程序。
