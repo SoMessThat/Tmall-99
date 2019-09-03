@@ -19,11 +19,11 @@ def goback():
 
 def task1():
     print('===== 聚划算店铺 ======')
-    for i in range(1, 11):
+    for i in range(1, 51):
         initlocal()
         print('第 {} 次去逛店'.format(i))
         time.sleep(1)
-        os.system('adb shell input tap 900 1100')   # 聚划算店铺
+        os.system('adb shell input tap 900 1500')   # 聚划算店铺
         rtime = random.randint(12, 15)  # 随机等待12-15秒
         print('进入店铺，浏览中，请等待 {} 秒'.format(rtime))
         time.sleep(rtime)
@@ -35,7 +35,7 @@ def task2():
     print('====== 逛天猫预售主会场 ======')
     initlocal()
     time.sleep(1)
-    os.system('adb shell input tap 900 1288')   # 点击去浏览
+    os.system('adb shell input tap 900 1188')   # 点击去浏览
     print('进入会场，浏览中，请等待 13 秒')
     time.sleep(13)
     goback()
@@ -45,7 +45,7 @@ def task2():
     initlocal()
     print('第 1 次去浏览')
     time.sleep(1)
-    os.system('adb shell input tap 900 1462')   # 点击去浏览
+    os.system('adb shell input tap 900 1350')   # 点击去浏览1
     print('进入会场，浏览中，请等待 13 秒')
     time.sleep(13)
     goback()
@@ -101,26 +101,10 @@ def task4():
         goback()
         time.sleep(1)
     print('查看南北PK情况任务')
-    
-def goahead():
-    print('===== 继续逛聚划算店铺，但需要休息40秒，否则会显示今日任务已结束 ======')
-    for i in range(1, 51):
-        initlocal()
-        print('休息40秒')
-        time.sleep(40)
-        print('第 {} 次去逛店'.format(i))
-        time.sleep(1)
-        os.system('adb shell input tap 900 1100')   # 聚划算店铺
-        rtime = random.randint(12, 15)  # 随机等待12-15秒
-        print('进入店铺，浏览中，请等待 {} 秒'.format(rtime))
-        time.sleep(rtime)
-        goback()
-        time.sleep(1)
-    print('已完成聚划算店铺任务')
-    
-task1()
+ 
+ 
 task2()
 task3()
 task4()
-goahead()
+task1()
 print('全部任务已完成')
