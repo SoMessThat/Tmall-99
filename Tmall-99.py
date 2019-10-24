@@ -32,7 +32,7 @@ def task1():
     
 def task2():
     print('====== 浏览会场 ======')
-    for i in range(1, 6):
+    for i in range(1, 4):
         os.system('adb shell input tap 900 1350')   # 点击去浏览
         initlocal()
         print('进入会场，浏览中，请等待 16 秒')
@@ -40,16 +40,17 @@ def task2():
         goback()
     print('已完成浏览会场任务')
     print('====== 浏览其他会场 ======')
-    os.system('adb shell input tap 900 1600')   # 点击去浏览1
-    time.sleep(2)   # 滑动前休息2秒，避免网络不好
-    initlocal()
-    print('进入会场，浏览中，请等待 16 秒')
-    time.sleep(16)
-    goback()
+    for i in range(1, 4):
+        os.system('adb shell input tap 900 1600')   # 点击去浏览1
+        time.sleep(2)   # 滑动前休息2秒，避免网络不好
+        initlocal()
+        print('进入会场，浏览中，请等待 16 秒')
+        time.sleep(16)
+        goback()
 
 def task3():
     print('====== 浏览会场 ======')
-    for i in range(1, 6):
+    for i in range(1, 3):
         os.system('adb shell input tap 900 1400')   # 点击去浏览
         time.sleep(2)   # 滑动前休息2秒，避免网络不好
         initlocal()
@@ -58,12 +59,13 @@ def task3():
         goback()
     print('已完成浏览会场任务')
     print('====== 浏览其他会场 ======')
-    os.system('adb shell input tap 900 1650')   # 点击去浏览1
-    time.sleep(2)   # 滑动前休息2秒，避免网络不好
-    initlocal()
-    print('进入会场，浏览中，请等待 16 秒')
-    time.sleep(16)
-    goback()
+    for i in range(1, 4):
+        os.system('adb shell input tap 900 1650')   # 点击去浏览1
+        time.sleep(2)   # 滑动前休息2秒，避免网络不好
+        initlocal()
+        print('进入会场，浏览中，请等待 16 秒')
+        time.sleep(16)
+        goback()
  
 os.system('adb shell input tap 900 1700')   # 点击领喵币，弹出任务菜单
 time.sleep(1)
@@ -73,3 +75,4 @@ os.system('adb shell input swipe 900 1600 900 1200')    # 下拉任务列表
 time.sleep(1)
 task3()
 print('全部任务已完成')
+os.system("pause")
